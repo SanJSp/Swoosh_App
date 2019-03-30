@@ -55,23 +55,25 @@
                 android:text="@string/mens"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" tools:layout_editor_absoluteY="262dp"
-                tools:layout_editor_absoluteX="161dp" android:id="@+id/toggleButton" android:textOff="@string/mens"
+                tools:layout_editor_absoluteX="161dp" android:id="@+id/mensLeagueBttm" android:textOff="@string/mens"
                 android:textOn="@string/mens" android:fontFamily="@font/montserrat"
                 android:background="@drawable/swoosh_toggle" android:textColor="@android:color/white"
-                android:textSize="18sp" android:textStyle="bold"/>
+                android:textSize="18sp" android:textStyle="bold" android:onClick="onMensClicked"/>
         <ToggleButton
                 android:text="@string/women"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton2" android:layout_marginBottom="16dp"
+                android:layout_height="wrap_content" android:id="@+id/womensLeagueBttm"
+                android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp" android:textOff="@string/women" android:textOn="@string/women"
                 android:background="@drawable/swoosh_toggle" android:textColor="@android:color/white"
-                android:textSize="18sp" android:fontFamily="@font/montserrat" android:textStyle="bold"/>
+                android:textSize="18sp" android:fontFamily="@font/montserrat" android:textStyle="bold"
+                android:onClick="onWomensClicked"/>
         <ToggleButton
                 android:text="@string/mixed"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton3" android:textOff="@string/mixed"
+                android:layout_height="wrap_content" android:id="@+id/mixedButton" android:textOff="@string/mixed"
                 android:textOn="@string/mixed" android:background="@drawable/swoosh_toggle"
                 android:textColor="@android:color/white" android:textSize="18sp" android:fontFamily="@font/montserrat"
-                android:textStyle="bold"/>
+                android:textStyle="bold" android:onClick="onMixedClicked"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
