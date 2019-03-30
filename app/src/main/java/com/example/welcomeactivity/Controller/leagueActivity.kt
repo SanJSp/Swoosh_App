@@ -1,15 +1,18 @@
-package com.example.welcomeactivity
+package com.example.welcomeactivity.Controller
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.welcomeactivity.Model.Player
+import com.example.welcomeactivity.R
+import com.example.welcomeactivity.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_league.*
 
 class leagueActivity : BaseActivity() {
 
     var selectedLeague = ""
+    var player = Player("","")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
@@ -19,7 +22,7 @@ class leagueActivity : BaseActivity() {
         womensLeagueBttm.isChecked = false
         mixedButton.isChecked = false
 
-        selectedLeague = "mens"
+        player.league = "mens"
 
     }
 
@@ -27,7 +30,7 @@ class leagueActivity : BaseActivity() {
         mensLeagueBttm.isChecked = false
         mixedButton.isChecked = false
 
-        selectedLeague = "women"
+        player.league = "women"
 
     }
 
@@ -35,15 +38,15 @@ class leagueActivity : BaseActivity() {
         womensLeagueBttm.isChecked = false
         mensLeagueBttm.isChecked = false
 
-        selectedLeague = "mixed"
+        player.league = "mixed"
 
     }
 
 
     fun leagueNextClicked(view: View) {
-        if (selectedLeague != "") {
+        if (player.league != "") {
             val skillActivity = Intent(this, SkillActivity::class.java)
-            skillActivity.putExtra(EXTRA_LEAGUE, selectedLeague)
+            skillActivity.putExtra(EXTRA_PLAYER, player)
             startActivity(skillActivity)
         }else{
             Toast.makeText(this, "Please select a league", Toast.LENGTH_SHORT).show()
