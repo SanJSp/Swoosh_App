@@ -3,7 +3,7 @@ package com.example.welcomeactivity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class leagueActivity : AppCompatActivity() {
+class leagueActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
