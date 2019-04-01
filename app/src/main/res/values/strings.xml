@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WelcomeActivity</string>
+    <string name="app_name">Swoosh</string>
     <string name="background_image">background_image</string>
     <string name="next">NEXT</string>
     <string name="app_logo">app_logo</string>
